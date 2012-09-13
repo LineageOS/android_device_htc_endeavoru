@@ -218,6 +218,7 @@ lib/libsensors_mpl.so
 lib/libstagefrighthw.so
 lib/libsuplhelperservicejni.so
 lib/libsupllocationprovider.so
+lib/libsurfaceflinger_client.so
 lib/libwvdrm_L1.so
 lib/libwvm.so
 lib/libWVStreamControlAPI_L1.so
@@ -239,3 +240,4 @@ lib/hw/gralloc.tegra.so
 lib/hw/hwcomposer.tegra.so
 lib/hw/nfc.endeavoru.so
 lib/hw/sensors.endeavoru.so
+lib/hw/vendor-camera.tegra.so
