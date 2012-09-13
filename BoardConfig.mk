@@ -109,7 +109,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 
 #Recovery
 TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/endeavoru/prebuilt/recovery_kernel
-TARGET_RECOVERY_INITRC := device/htc/endeavoru/recovery/init.rc
+BOARD_CUSTOM_BOOTIMG_MK := device/htc/endeavoru/recovery/custombootimg.mk
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_NO_MISC_PARTITION := true
