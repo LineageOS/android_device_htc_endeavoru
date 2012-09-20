@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAYX//9kw\u003d",
+        "filename": "configs/gps.conf",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2726
+      },
+      "writtenOn": "2012-09-20T10:06:23Z",
+      "side": 1,
+      "message": "this isn\u0027t present anymore :p",
+      "revId": "98a3bb552426c2dfe65a21003fdf767dae4773da",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
