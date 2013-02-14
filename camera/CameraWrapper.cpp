@@ -97,7 +97,18 @@ static int check_vendor_module()
 };*/
 
 const static char * iso_values[] = {"auto,ISO50,ISO100,ISO200,ISO400,ISO800","auto"};
-const static char * scene_mode_values[] = {"auto,action,portrait,landscape,beach,fireworks,night,night-portrait,snow,sports,steadyphoto,sunset,theatre,barcode,candlelight,hdr,text","auto"};
+
+/**
+ * The ICS camera.tegra.so blob supports the following scene-mode-values.
+ * auto,action,portrait,landscape,beach,fireworks,night,night-portrait,snow,
+ * sports,steadyphoto,sunset,theatre,barcode,candlelight,beauty-mode,
+ * background-blur,backlight-hdr,close-up,white-board,flowers
+ *
+ * Some of the values have to be mapped to new values. These are:
+ * backlight-hdr -> hdr
+ * close-up -> closeup
+ */
+const static char * scene_mode_values[] = {"auto,action,portrait,landscape,beach,fireworks,night,night-portrait,snow,sports,steadyphoto,sunset,theatre,barcode,candlelight,beauty-mode,background-blur,hdr,closeup,white-board,flowers", "auto"};
 
 static char * camera_fixup_getparams(int id, const char * settings)
 {
@@ -172,6 +183,8 @@ char * camera_fixup_setparams(int id, const char * settings)
         const char* sceneMode = params.get(android::CameraParameters::KEY_SCENE_MODE);
         if(strcmp(sceneMode, "hdr") == 0)
             params.set(android::CameraParameters::KEY_SCENE_MODE, "backlight-hdr");
+        else if (strcmp(sceneMode, "closeup") == 0)
+            params.set(android::CameraParameters::KEY_SCENE_MODE, "close-up");
     }
 
     android::String8 strParams = params.flatten();
