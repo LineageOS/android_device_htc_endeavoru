@@ -1,0 +1,32 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="s2w_switch_entries">
+        <item>Disabled</item>
+        <item>Enabled</item>
+    </string-array>
+    <string-array name="s2w_stroke_entries">
+        <item>Direction dependent</item>
+        <item>Any direction</item>
+    </string-array>
+
+    <string-array name="fastcharge_entries">
+        <item>Disabled</item>
+        <item>Enabled</item>
+    </string-array>
+
+
+    <string-array name="s2w_switch_entries_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="s2w_stroke_entries_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="fastcharge_entries_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+</resources>

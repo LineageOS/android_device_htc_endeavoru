@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">One X Settings</string>
+
+    <string name="category_s2w_title">Sweep2Wake</string>
+    <string name="s2w_switch_title_head">Sweep2Wake Switch</string>
+    <string name="s2w_switch_summary_head">Enable switching on/off phone screen with capacitive buttons swipe</string>
+    <string name="s2w_stroke_title_head">Sweep2Wake Direction</string>
+    <string name="s2w_stroke_summary_head">Set Direction dependent if you want it to switch on left-to-right, and off right-to-left</string>
+
+    <string name="category_usb_title">USB</string>
+    <string name="fastcharge_title_head">FastCharge Switch</string>
+    <string name="fastcharge_summary_head">Enable FastCharge through USB cable like it were an AC charger (consumes more on laptop!)</string>
+
+</resources>

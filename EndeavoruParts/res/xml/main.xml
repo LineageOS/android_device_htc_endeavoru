@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory
+    	android:title="@string/category_s2w_title">
+	    <!-- s2w switch Options -->
+	    <ListPreference
+	        android:key="s2w_switch"
+	        android:title="@string/s2w_switch_title_head"
+	        android:summary="@string/s2w_switch_summary_head"
+	        android:entries="@array/s2w_switch_entries"
+	        android:entryValues="@array/s2w_switch_entries_values"
+	        android:defaultValue="1" />
+	    <!-- s2w stroke Options -->
+	    <ListPreference
+	        android:key="s2w_stroke"
+	        android:title="@string/s2w_stroke_title_head"
+	        android:summary="@string/s2w_stroke_summary_head"
+	        android:entries="@array/s2w_stroke_entries"
+	        android:entryValues="@array/s2w_stroke_entries_values"
+	        android:defaultValue="1" />
+	</PreferenceCategory>
+
+	<PreferenceCategory
+    	android:title="@string/category_usb_title">
+	    <!-- Fastcharge Options -->
+	    <ListPreference
+	        android:key="fastcharge"
+	        android:title="@string/fastcharge_title_head"
+	        android:summary="@string/fastcharge_summary_head"
+	        android:entries="@array/fastcharge_entries"
+	        android:entryValues="@array/fastcharge_entries_values"
+	        android:defaultValue="0" />
+	</PreferenceCategory>
+
+
+</PreferenceScreen>
