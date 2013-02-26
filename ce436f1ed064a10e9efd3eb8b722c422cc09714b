@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdX//65k\u003d",
+        "filename": "EndeavoruParts/res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-26T02:07:20Z",
+      "side": 1,
+      "message": "- turning on and turning off?",
+      "revId": "ce436f1ed064a10e9efd3eb8b722c422cc09714b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
