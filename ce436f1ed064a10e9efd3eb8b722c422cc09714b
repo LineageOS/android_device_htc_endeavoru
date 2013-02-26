@@ -16,6 +16,24 @@
       "revId": "ce436f1ed064a10e9efd3eb8b722c422cc09714b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//65Y\u003d",
+        "filename": "EndeavoruParts/res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5678
+      },
+      "writtenOn": "2013-02-26T02:22:25Z",
+      "side": 1,
+      "message": "When \"Direction dependent\" is set the screen is turned on by a left to right swipe only and turned off by a right to left swipe only. If you have a better suggestion for a description then feel free to voice it :).",
+      "parentUuid": "AAAAdX//65k\u003d",
+      "revId": "ce436f1ed064a10e9efd3eb8b722c422cc09714b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
