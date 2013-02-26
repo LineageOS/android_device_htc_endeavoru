@@ -52,6 +52,24 @@
       "revId": "ce436f1ed064a10e9efd3eb8b722c422cc09714b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//64w\u003d",
+        "filename": "EndeavoruParts/res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5678
+      },
+      "writtenOn": "2013-02-26T02:36:49Z",
+      "side": 1,
+      "message": "God I\u0027m stupid. Thank you.",
+      "parentUuid": "AAAAdX//65E\u003d",
+      "revId": "ce436f1ed064a10e9efd3eb8b722c422cc09714b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
