@@ -9,7 +9,7 @@
         <item>2 boutons</item>
         <item>3 boutons</item>
     </string-array>
-    
+
     <string-array name="s2w_stroke_entries_values" translatable="false">
         <item>1</item>
         <item>0</item>
@@ -18,6 +18,6 @@
         <item>325</item>
         <item>500</item>
         <item>850</item>
-    </string-array>        
+    </string-array>
 
 </resources>

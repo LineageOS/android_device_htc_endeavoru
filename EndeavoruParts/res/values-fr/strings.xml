@@ -4,11 +4,11 @@
 
     <string name="category_s2w_title">Sweep2Wake</string>
     <string name="s2w_switch_title_head">Sweep2Wake</string>
-    <string name="s2w_switch_summary_head">Activer pour mettre en veille / réveiller le téléphone par un simple glissement sur les boutons capacitifs</string>
+    <string name="s2w_switch_summary_head">Activer pour mettre en veille/réveiller le téléphone par un simple glissement sur les boutons capacitifs</string>
     <string name="s2w_stroke_title_head">Directions Sweep2Wake</string>
     <string name="s2w_stroke_summary_head">Sélectionner "Relatif à la direction" pour différencier le glissement de gauche à droite pour le réveil et de droite à gauche pour la mise en veille</string>
     <string name="s2w_length_title_head">Taille Minimum Sweep2Wake</string>
-    <string name="s2w_length_summary_head">Définir le nombre de boutons requis pour mettre en veille / réveiller lors du glissement</string>
+    <string name="s2w_length_summary_head">Définir le nombre de boutons requis pour mettre en veille/réveiller lors du glissement</string>
 
     <string name="category_usb_title">USB</string>
     <string name="fastcharge_title_head">Charge Rapide</string>
