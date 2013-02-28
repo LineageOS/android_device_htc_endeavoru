@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdX//6T8\u003d",
+        "filename": "EndeavoruParts/res/values-fr/arrays.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3530
+      },
+      "writtenOn": "2013-02-28T03:10:58Z",
+      "side": 1,
+      "message": "these shouldn\u0027t be in the translation, it\u0027s not translatable, therefore it has no meaning to be here.",
+      "revId": "9abe4b441d5f3eb0ba70f5a9484f4debb3c4791c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//6T4\u003d",
+        "filename": "EndeavoruParts/res/values-fr/arrays.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 3530
+      },
+      "writtenOn": "2013-02-28T03:10:58Z",
+      "side": 1,
+      "message": "these shouldn\u0027t be in the translation, it\u0027s not translatable, therefore it has no meaning to be here.",
+      "revId": "9abe4b441d5f3eb0ba70f5a9484f4debb3c4791c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
