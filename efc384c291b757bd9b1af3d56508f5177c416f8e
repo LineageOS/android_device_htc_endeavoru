@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAdX//6Qg\u003d",
+        "filename": "EndeavoruParts/res/values-fr/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 5596
+      },
+      "writtenOn": "2013-02-28T04:07:17Z",
+      "side": 1,
+      "message": "Apparemment pas",
+      "parentUuid": "AAAAdX//6Rc\u003d",
+      "revId": "efc384c291b757bd9b1af3d56508f5177c416f8e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAdX//6RY\u003d",
         "filename": "EndeavoruParts/res/values-fr/strings.xml",
         "patchSetId": 5
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAdX//6Qc\u003d",
+        "filename": "EndeavoruParts/res/values-fr/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 5596
+      },
+      "writtenOn": "2013-02-28T04:07:17Z",
+      "side": 1,
+      "message": "Idem apparemment non traduisible",
+      "parentUuid": "AAAAdX//6RY\u003d",
+      "revId": "efc384c291b757bd9b1af3d56508f5177c416f8e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAdX//6Ro\u003d",
         "filename": "EndeavoruParts/res/values-fr/strings.xml",
         "patchSetId": 5
@@ -47,6 +83,41 @@
       "writtenOn": "2013-02-28T03:53:14Z",
       "side": 1,
       "message": "Dans un \"summary\" on peut être plus explicite, par exemple  \"mettre en veille/réveiller le téléphone\" \u003d\u003e \"mettre en veille ou réveiller le téléphone\"",
+      "revId": "efc384c291b757bd9b1af3d56508f5177c416f8e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//6RQ\u003d",
+        "filename": "EndeavoruParts/res/values-fr/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5596
+      },
+      "writtenOn": "2013-02-28T04:07:17Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "AAAAdX//6Ro\u003d",
+      "revId": "efc384c291b757bd9b1af3d56508f5177c416f8e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//6RA\u003d",
+        "filename": "EndeavoruParts/res/values-fr/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5596
+      },
+      "writtenOn": "2013-02-28T04:07:17Z",
+      "side": 1,
+      "message": "Taille minimum sans majuscule",
       "revId": "efc384c291b757bd9b1af3d56508f5177c416f8e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -81,6 +152,24 @@
       "writtenOn": "2013-02-28T03:53:14Z",
       "side": 1,
       "message": "\"Charge rapide\", sans majuscule à \"rapide\"",
+      "revId": "efc384c291b757bd9b1af3d56508f5177c416f8e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//6RM\u003d",
+        "filename": "EndeavoruParts/res/values-fr/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5596
+      },
+      "writtenOn": "2013-02-28T04:07:17Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "AAAAdX//6Rg\u003d",
       "revId": "efc384c291b757bd9b1af3d56508f5177c416f8e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
