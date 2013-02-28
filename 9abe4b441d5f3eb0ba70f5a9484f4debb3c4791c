@@ -33,6 +33,23 @@
       "revId": "9abe4b441d5f3eb0ba70f5a9484f4debb3c4791c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAdX//6To\u003d",
+        "filename": "EndeavoruParts/res/values-fr/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-28T03:20:11Z",
+      "side": 1,
+      "message": "\\\" instead of just \"",
+      "revId": "9abe4b441d5f3eb0ba70f5a9484f4debb3c4791c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
