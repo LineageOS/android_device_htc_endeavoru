@@ -35,12 +35,14 @@ static pthread_once_t g_init = PTHREAD_ONCE_INIT;
 static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
 static struct light_state_t g_notification;
 static struct light_state_t g_battery;
+static struct light_state_t g_buttons;
 static int g_backlight = 255;
 
 char const*const AMBER_LED_FILE = "/sys/class/leds/amber/brightness";
 char const*const GREEN_LED_FILE = "/sys/class/leds/green/brightness";
 
 char const*const BUTTON_FILE = "/sys/class/leds/button-backlight/brightness";
+char const*const BUTTON_BEHAVIOUR_FILE = "/sys/devices/platform/tegra-i2c.1/i2c-1/1-0032/behavior";
 
 char const*const AMBER_BLINK_FILE = "/sys/class/leds/amber/blink";
 char const*const GREEN_BLINK_FILE = "/sys/class/leds/green/blink";
@@ -199,8 +201,50 @@ static void set_speaker_light_locked_dual(struct light_device_t *dev,
   }
 }
 
+static void set_light_buttons_blink_locked(struct light_device_t *dev,
+                                           struct light_state_t *state) {
+  ALOGW("set_buttons: notification %d, buttons %d", is_lit(state), is_lit(&g_buttons));
+
+  // Start blinking only if backlight buttons are off
+  if(is_lit(state) && !is_lit(&g_buttons)) {
+    write_int(BUTTON_BEHAVIOUR_FILE, 9);
+  } else {
+    write_int(BUTTON_BEHAVIOUR_FILE, 10);
+  }
+}
+
+static int set_light_buttons_locked(struct light_device_t* dev,
+                             struct light_state_t const* state) {
+  int err = 0;
+  int on = is_lit(state);
+  g_buttons = *state;
+
+  // Stop blinking if button backlights get turned on
+  if(on)
+    set_light_buttons_blink_locked(dev, &g_notification);
+  err = write_int(BUTTON_FILE, on ? 255 : 0);
+
+  // Start blinking if buttons backlight turns off
+  if(!on)
+    set_light_buttons_blink_locked(dev, &g_notification);
+
+  return err;
+}
+
+static int set_light_buttons(struct light_device_t* dev,
+                             struct light_state_t const* state) {
+  int err;
+  pthread_mutex_lock(&g_lock);
+  err = set_light_buttons_locked(dev, state);
+  pthread_mutex_unlock(&g_lock);
+
+  return 0;
+}
 
 static void handle_speaker_battery_locked(struct light_device_t *dev) {
+  // Start blinking if button backlights are off
+  set_light_buttons_blink_locked(dev, &g_notification);
+
   if (is_lit(&g_battery) && is_lit(&g_notification)) {
     set_speaker_light_locked_dual(dev, &g_battery, &g_notification);
   } else if (is_lit (&g_battery)) {
@@ -208,17 +252,6 @@ static void handle_speaker_battery_locked(struct light_device_t *dev) {
   } else {
     set_speaker_light_locked(dev, &g_notification);
   }
-}
-
-static int set_light_buttons(struct light_device_t* dev,
-                             struct light_state_t const* state) {
-  int err = 0;
-  int on = is_lit(state);
-  pthread_mutex_lock(&g_lock);
-  err = write_int(BUTTON_FILE, on ? 255 : 0);
-  pthread_mutex_unlock(&g_lock);
-
-  return 0;
 }
 
 static int rgb_to_brightness(struct light_state_t const* state)
