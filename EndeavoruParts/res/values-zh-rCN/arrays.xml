@@ -1,0 +1,12 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="s2w_stroke_entries">
+        <item>任何方向</item>
+        <item>指定方向</item>
+    </string-array>
+
+    <string-array name="s2w_length_entries">
+        <item>1 个按键</item>
+        <item>2 个按键</item>
+        <item>3 个按键</item>
+    </string-array>
+</resources>
