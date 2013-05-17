@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "hitSRd4",
+        "filename": "EndeavoruParts/res/values-cs/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 3875
+      },
+      "writtenOn": "2013-05-17T04:12:10Z",
+      "side": 1,
+      "message": "tlacitka",
+      "revId": "10c55ea82f50332d218be36394c02658c863b626",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "hgteaek",
+        "filename": "EndeavoruParts/res/values-cs/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 3875
+      },
+      "writtenOn": "2013-05-17T04:12:10Z",
+      "side": 1,
+      "message": "Tady spis tecku a zacit novou vetu? :)",
+      "revId": "10c55ea82f50332d218be36394c02658c863b626",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
