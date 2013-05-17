@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "hitLZbI",
+        "filename": "EndeavoruParts/res/values-cs/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2270
+      },
+      "writtenOn": "2013-05-17T14:29:42Z",
+      "side": 1,
+      "message": "Pokud je nastaveno",
+      "revId": "86ae514d2febbfb355e163931c048e24969147af",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "hgvHiRM",
+        "filename": "EndeavoruParts/res/values-cs/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2270
+      },
+      "writtenOn": "2013-05-17T14:29:42Z",
+      "side": 1,
+      "message": "Tohle je cele krkolomne\nPokud je povoleno, bude telefon p?ipojený k USB portu ?erpat více energie",
+      "revId": "86ae514d2febbfb355e163931c048e24969147af",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
