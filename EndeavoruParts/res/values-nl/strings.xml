@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources>
+    <string name="app_name">Geavanceerde instellingen</string>
+    <string name="s2w_switch_title_head">Inschakelen</string>
+    <string name="s2w_switch_summary_head">Scherm aan-/uitzetten door over de aanraakknoppen te vegen</string>
+    <string name="s2w_stroke_title_head">Richting</string>
+    <string name="s2w_stroke_summary_head">'/Richtingsafhankelijk/' instellen om aan te zetten door van links naar rechts te vegen en uit te zetten door van rechts naar links te vegen</string>
+    <string name="s2w_length_title_head">Minimale afstand</string>
+    <string name="s2w_length_summary_head">Aantal knoppen instellen die nodig zijn om over te vegen om het scherm aan of uit te zetten</string>
+    <string name="fastcharge_title_head">Snelladen</string>
+    <string name="fastcharge_summary_head">Inschakelen om meer stroom te trekken wanneer verbonden met een USB-poort</string>
+    <string name="category_backlightdisable_title">Achtergrondverlichting</string>
+    <string name="backlightdisable_title_head">Verlichting van knoppen uitschakelen</string>
+    <string name="backlightdisable_summary_head">Selecteren om de verlichting van knoppen uit te schakelen</string>
+    <string name="backlightnotification_title_head">Verlichtingsmelding</string>
+    <string name="backlightnotification_summary_head">Selecteren om de verlichting van knoppen te gebruiken bij meldingen</string>
+    <string name="smartdimmer_switch_title_head">Inschakelen</string>
+    <string name="smartdimmer_switch_summary_head">nVidia SmartDimmer in-/uitschakelen (Inschakelen bespaart accu door minder achtergrondverlichting and meer contrast/kleuren, uitschakelen zou helderdere LCD-achtergrondverlichting moeten opleveren)</string>
+</resources>
