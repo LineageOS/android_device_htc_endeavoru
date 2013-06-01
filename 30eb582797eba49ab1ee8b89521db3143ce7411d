@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "iEb570w",
+        "filename": "EndeavoruParts/res/values-nl/arrays.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:25:07Z",
+      "side": 1,
+      "message": "Onnodige witregel",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "iOZZI5A",
         "filename": "EndeavoruParts/res/values-nl/arrays.xml",
         "patchSetId": 1
@@ -47,6 +64,40 @@
       "writtenOn": "2013-06-01T00:21:14Z",
       "side": 1,
       "message": "- Drie knoppen",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iIb-BzQ",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:25:07Z",
+      "side": 1,
+      "message": "Onnodige witregel",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iGb88z4",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:25:07Z",
+      "side": 1,
+      "message": "Kun je deze resources-regel veranderen naar hoe het in arrays.xml staat? Dat \u0027wordt\u0027 de standaard.",
       "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
