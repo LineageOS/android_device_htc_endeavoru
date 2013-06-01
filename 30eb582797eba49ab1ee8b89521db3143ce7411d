@@ -1,0 +1,191 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "iOZZI5A",
+        "filename": "EndeavoruParts/res/values-nl/arrays.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:21:14Z",
+      "side": 1,
+      "message": "- Eén knop",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iMZeH3Y",
+        "filename": "EndeavoruParts/res/values-nl/arrays.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:21:14Z",
+      "side": 1,
+      "message": "- Twee knoppen",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iAZlN0Q",
+        "filename": "EndeavoruParts/res/values-nl/arrays.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:21:14Z",
+      "side": 1,
+      "message": "- Drie knoppen",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iKZUS1Q",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:21:14Z",
+      "side": 1,
+      "message": "Ik zie de reden niet om aanhalingstekens te plaatsen om \u0027Richtingsafhankelijk\u0027. (Overigens moet het in het begin \\\u0027 zijn i.p.v. \u0027\\, hierdoor faalt Cid.)\n\n- Richtingsafhankelijk instellen (van links naar rechts vegen om in te schakelen en omgekeerd om uit te schakelen)",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iIZRR2U",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:21:14Z",
+      "side": 1,
+      "message": "- Aantal over te vegen knoppen om het scherm aan/uit te zetten",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iGZOM8M",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:21:14Z",
+      "side": 1,
+      "message": "- te trekken \u003e\u003e door te voeren?\n- wanneer \u003e\u003e indien",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iEZLL7E",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:21:14Z",
+      "side": 1,
+      "message": "- Verlichting uitschakelen van knoppen",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iCbHGxQ",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:21:14Z",
+      "side": 1,
+      "message": "- Selecteren \u003e\u003e Kies",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iAbMFzQ",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:21:14Z",
+      "side": 1,
+      "message": "- Selecteren \u003e\u003e Kies",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iObQA8w",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:21:14Z",
+      "side": 1,
+      "message": "- nVidia SmartDimmer",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iMbV-7k",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:21:14Z",
+      "side": 1,
+      "message": "- Inschakelen voor energiebesparing door minder achtergrondverlichting en meer contrast/kleuren, uitschakelen voor helderdere LCD-achtergrondverlichting (theoretisch gezien)",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
