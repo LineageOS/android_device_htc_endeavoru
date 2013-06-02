@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "iKvHc0Q",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-06-02T04:41:11Z",
+      "side": 1,
+      "message": "- Achtergrondlicht",
+      "revId": "fd39c44f8a17dca016ad975a6c71df1dd324e90a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iIvEr0A",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-06-02T04:41:11Z",
+      "side": 1,
+      "message": "- Achtergrondlicht uitschakelen",
+      "revId": "fd39c44f8a17dca016ad975a6c71df1dd324e90a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iGvBWy4",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-06-02T04:41:11Z",
+      "side": 1,
+      "message": "- Achtergrondlicht van knoppen uitschakelen",
+      "revId": "fd39c44f8a17dca016ad975a6c71df1dd324e90a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iAvnf.U",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-06-02T04:41:11Z",
+      "side": 1,
+      "message": "- Knoppenmeldingen",
+      "revId": "fd39c44f8a17dca016ad975a6c71df1dd324e90a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iOvrK68",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-06-02T04:41:11Z",
+      "side": 1,
+      "message": "- Bij meldingen aanraakknoppen oplichten indien scherm uit is",
+      "revId": "fd39c44f8a17dca016ad975a6c71df1dd324e90a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
