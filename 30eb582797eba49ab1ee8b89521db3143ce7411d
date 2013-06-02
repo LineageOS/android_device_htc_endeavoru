@@ -121,6 +121,24 @@
     },
     {
       "key": {
+        "uuid": "iIvIL3Y",
+        "filename": "EndeavoruParts/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-06-02T03:40:03Z",
+      "side": 1,
+      "message": "Omdat \u0027Richtingsafhankelijk\u0027 een van de keuzes is in de array.\nDe andere keuze is niet richtingsafhankelijk.",
+      "parentUuid": "iKZUS1Q",
+      "revId": "30eb582797eba49ab1ee8b89521db3143ce7411d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "iIZRR2U",
         "filename": "EndeavoruParts/res/values-nl/strings.xml",
         "patchSetId": 1
