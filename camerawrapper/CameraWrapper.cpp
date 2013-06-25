@@ -23,17 +23,18 @@
 
 
 #define LOG_NDEBUG 0
-//#define LOG_PARAMETERS
+#define LOG_PARAMETERS
 
 #define LOG_TAG "CameraWrapper"
 #include <cutils/log.h>
 
 #include <utils/threads.h>
 #include <utils/String8.h>
-#include <hardware/hardware.h>
-#include <hardware/camera.h>
+
 #include <camera/Camera.h>
 #include <camera/CameraParameters.h>
+
+#include "NvCamera.h"
 
 static android::Mutex gCameraWrapperLock;
 static camera_module_t *gVendorModule = 0;
@@ -67,7 +68,7 @@ camera_module_t HAL_MODULE_INFO_SYM = {
 typedef struct wrapper_camera_device {
     camera_device_t base;
     int id;
-    camera_device_t *vendor;
+    nv_camera_device_t *vendor;
 } wrapper_camera_device_t;
 
 #define VENDOR_CALL(device, func, ...) ({ \
@@ -357,7 +358,11 @@ int camera_set_parameters(struct camera_device * device, const char *params)
     __android_log_write(ANDROID_LOG_VERBOSE, LOG_TAG, tmp);
 #endif
 
-    int ret = VENDOR_CALL(device, set_parameters, tmp);
+    int ret = VENDOR_CALL(device, set_custom_parameters, tmp);
+    if(!ret)
+        ALOGW("%s: set_custom_parameters failed", __FUNCTION__);
+
+    ret = VENDOR_CALL(device, set_parameters, tmp);
     return ret;
 }
 
@@ -370,20 +375,38 @@ char* camera_get_parameters(struct camera_device * device)
         return NULL;
 
     char* params = VENDOR_CALL(device, get_parameters);
+    char* custom_params = VENDOR_CALL(device, get_custom_parameters);
 
 #ifdef LOG_PARAMETERS
     __android_log_write(ANDROID_LOG_VERBOSE, LOG_TAG, params);
+    __android_log_write(ANDROID_LOG_VERBOSE, LOG_TAG, custom_params);
 #endif
 
-    char * tmp = camera_fixup_getparams(CAMERA_ID(device), params);
+ALOGV("%s: Params length %d, custom: %d", __FUNCTION__, strlen(params), strlen(custom_params));
+
+    /* Since we can't modify the Camera API we have to concat the two sets of
+       parameters.*/
+    char* concat_params;
+    concat_params = (char *) malloc(strlen(params) + strlen(custom_params) + 1);
+ALOGV("%s: Allocated address %p", __FUNCTION__, concat_params);
+    strcpy(concat_params, params);
+    strcat(concat_params, ";");
+    strcat(concat_params, custom_params);
+
     VENDOR_CALL(device, put_parameters, params);
-    params = tmp;
+    VENDOR_CALL(device, put_parameters, custom_params);
+
+    char * tmp = camera_fixup_getparams(CAMERA_ID(device), concat_params);
+ALOGV("%s: Freeing address %p", __FUNCTION__, concat_params);
+    free(concat_params);
+ALOGV("%s: Freed address %p", __FUNCTION__, concat_params);
+//concat_params = tmp;
 
 #ifdef LOG_PARAMETERS
-    __android_log_write(ANDROID_LOG_VERBOSE, LOG_TAG, params);
+    __android_log_write(ANDROID_LOG_VERBOSE, LOG_TAG, tmp);
 #endif
 
-    return params;
+    return tmp;
 }
 
 static void camera_put_parameters(struct camera_device *device, char *params)
@@ -560,6 +583,8 @@ int camera_device_open(const hw_module_t* module, const char* name,
         camera_ops->send_command = camera_send_command;
         camera_ops->release = camera_release;
         camera_ops->dump = camera_dump;
+        //camera_ops->set_custom_parameters = camera_set_custom_parameters;
+        //camera_ops->get_custom_parameters = camera_get_custom_parameters;
 
         *device = &camera_device->base.common;
     }
