@@ -29,7 +29,7 @@
         android:maxFileSize="4096" />
     <!-- USB OTG -->
     <storage
-        android:mountPoint="/mnt/usb"
+        android:mountPoint="/storage/usbdisk"
         android:storageDescription="@string/storage_usb"
         android:primary="false"
         android:removable="true" />
