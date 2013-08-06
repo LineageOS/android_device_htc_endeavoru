@@ -48,6 +48,8 @@ TARGET_BOOTLOADER_BOARD_NAME :=
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/htc/endeavoru/config/egl.cfg
 BOARD_EGL_NEEDS_LEGACY_FB := true
+# Enable screenshot workaround for now
+COMMON_GLOBAL_CFLAGS += -DNEEDS_LEGACY_FB
 
 BOARD_KERNEL_CMDLINE := 
 BOARD_KERNEL_PAGESIZE := 2048
