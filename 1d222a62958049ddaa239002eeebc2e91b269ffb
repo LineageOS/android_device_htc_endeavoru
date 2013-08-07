@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fae47921_d535aef7",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2013-08-07T00:40:13Z",
+      "side": 1,
+      "message": "You should use $(MAKE) rather than hard-coding `make` here.",
+      "revId": "1d222a62958049ddaa239002eeebc2e91b269ffb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
