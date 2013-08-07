@@ -16,6 +16,24 @@
       "revId": "1d222a62958049ddaa239002eeebc2e91b269ffb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fae47921_352f5aa3",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 5678
+      },
+      "writtenOn": "2013-08-07T00:48:17Z",
+      "side": 1,
+      "message": "Thanks for the suggestion. Just $(MAKE) or $(MAKE) -j4?",
+      "parentUuid": "fae47921_d535aef7",
+      "revId": "1d222a62958049ddaa239002eeebc2e91b269ffb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
