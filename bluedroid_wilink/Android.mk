@@ -17,13 +17,15 @@
 ifeq ($(TARGET_DEVICE),endeavoru)
 
 LOCAL_PATH := $(call my-dir)
+BLUEDROID_PATH := external/bluetooth/bluedroid/
 include $(CLEAR_VARS)
 
-LOCAL_C_INCLUDES := external/bluetooth/bluedroid/hci/include
+LOCAL_C_INCLUDES :=\
+	$(BLUEDROID_PATH)/hci/include
 
 LOCAL_CFLAGS := -g -c -W -Wall -O2 -D_POSIX_SOURCE
 
-LOCAL_SRC_FILES := libbt-vendor-ti.c
+LOCAL_SRC_FILES += libbt-vendor-ti.c
 
 LOCAL_SHARED_LIBRARIES := \
 	libnativehelper \
@@ -34,7 +36,7 @@ LOCAL_SHARED_LIBRARIES := \
 LOCAL_PRELINK_MODULE := false
 LOCAL_MODULE := libbt-vendor
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MODULE_PATH := $(ANDROID_PRODUCT_OUT)/system/vendor/lib
 
 include $(BUILD_SHARED_LIBRARY)
 
