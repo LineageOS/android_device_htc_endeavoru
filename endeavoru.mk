@@ -76,7 +76,7 @@ PRODUCT_PACKAGES += \
     dhcpcd.conf \
     hostapd.conf \
     wifical.sh \
-    TQS_D_1.7.ini \
+    128x_TQS_D_1.7.ini \
     calibrator \
     crda \
     regulatory.bin \
