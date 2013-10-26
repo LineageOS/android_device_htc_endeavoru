@@ -1,0 +1,11 @@
+Since it is not recommended to provide a custom init.rc HTCs changes to it were
+extracted into init.htc-init.rc. The file will be imported by init.endeavoru.rc.
+Even though some of HTCs services are not relevant to CM I left them in there
+mostly untouched. In case modifications were made they are marked with a "# CM:"
+comment to make it easier to detect them.
+
+init.endeavoru.rc        : Imports the other scripts and contains CM additions
+init.htc-init.rc         : HTCs changes to init.rc
+init.endeavoru.common.rc : HTCs init.endeavoru.rc
+init.endeavoru.usb.rc    : HTCs init.endeavoru.usb.rc
+init.tegra3-common.rc    : Common stuff like hardware tunable permissions
