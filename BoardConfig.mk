@@ -20,11 +20,28 @@
 # definition file).
 #
 
+PRE_COMMON_GLOBAL_CFLAGS := $(COMMON_GLOBAL_CFLAGS)
+
 # inherit from tegra3-common
 -include device/htc/tegra3-common/BoardConfigCommon.mk
 
 #custom init rc
 TARGET_PROVIDES_INIT_RC := true
+
+# FIXME: Don't overwrite flags from BoardConfigCommon. It's just so I don't have
+# to patch tegra3-common and enrc2b for now.
+COMMON_GLOBAL_CFLAGS := $(PRE_COMMON_GLOBAL_CFLAGS)
+COMMON_GLOBAL_CFLAGS += -DHAVE_ISO
+COMMON_GLOBAL_CFLAGS += -DMR0_CAMERA_BLOB
+COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
+COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA_HARDWARE
+COMMON_GLOBAL_CFLAGS += -DHTCLOG
+
+# Sense 5 audio blobs
+TARGET_SPECIFIC_HEADER_PATH += device/htc/endeavoru/include
+# We override hardware/audio.h but support for newer audio blobs needs to
+# enabled additionaly so we don't forget about about it.
+COMMON_GLOBAL_CFLAGS += -DHTC_JB41_JB42_AUDIO_BLOB
 
 # Boot/Recovery image settings
 BOARD_KERNEL_CMDLINE := 
