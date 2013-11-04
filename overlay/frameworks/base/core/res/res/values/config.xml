@@ -220,4 +220,7 @@
 
     <!-- Device supports LED flashlight -->
     <bool name="config_enableTorch">true</bool>
+
+    <integer name="config_buttonBrightnessSettingDefault">140</integer>
+    <bool name="config_deviceHasVariableButtonBrightness">true</bool>
 </resources>
