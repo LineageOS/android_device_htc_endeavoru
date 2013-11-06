@@ -54,6 +54,33 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
+# Prebuilt Sense 5 kernel modules
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/prebuilt/modules/baseband_usb_chr.ko:system/lib/modules/baseband_usb_chr.ko \
+	$(LOCAL_PATH)/prebuilt/modules/baseband-xmm-power2.ko:system/lib/modules/baseband-xmm-power2.ko \
+	$(LOCAL_PATH)/prebuilt/modules/bluetooth.ko:system/lib/modules/bluetooth.ko \
+	$(LOCAL_PATH)/prebuilt/modules/bnep.ko:system/lib/modules/bnep.ko \
+	$(LOCAL_PATH)/prebuilt/modules/btwilink.ko:system/lib/modules/btwilink.ko \
+	$(LOCAL_PATH)/prebuilt/modules/cdc-acm.ko:system/lib/modules/cdc-acm.ko \
+	$(LOCAL_PATH)/prebuilt/modules/cfg80211.ko:system/lib/modules/cfg80211.ko \
+	$(LOCAL_PATH)/prebuilt/modules/compat.ko:system/lib/modules/compat.ko \
+	$(LOCAL_PATH)/prebuilt/modules/fm_drv.ko:system/lib/modules/fm_drv.ko \
+	$(LOCAL_PATH)/prebuilt/modules/gps_drv.ko:system/lib/modules/gps_drv.ko \
+	$(LOCAL_PATH)/prebuilt/modules/hci_uart.ko:system/lib/modules/hci_uart.ko \
+	$(LOCAL_PATH)/prebuilt/modules/hid-magicmouse.ko:system/lib/modules/hid-magicmouse.ko \
+	$(LOCAL_PATH)/prebuilt/modules/hidp.ko:system/lib/modules/hidp.ko \
+	$(LOCAL_PATH)/prebuilt/modules/kineto_gan.ko:system/lib/modules/kineto_gan.ko \
+	$(LOCAL_PATH)/prebuilt/modules/lib80211.ko:system/lib/modules/lib80211.ko \
+	$(LOCAL_PATH)/prebuilt/modules/mac80211.ko:system/lib/modules/mac80211.ko \
+	$(LOCAL_PATH)/prebuilt/modules/raw_ip_net.ko:system/lib/modules/raw_ip_net.ko \
+	$(LOCAL_PATH)/prebuilt/modules/rfcomm.ko:system/lib/modules/rfcomm.ko \
+	$(LOCAL_PATH)/prebuilt/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
+	$(LOCAL_PATH)/prebuilt/modules/st_drv.ko:system/lib/modules/st_drv.ko \
+	$(LOCAL_PATH)/prebuilt/modules/tcrypt.ko:system/lib/modules/tcrypt.ko \
+	$(LOCAL_PATH)/prebuilt/modules/ti_hci_drv.ko:system/lib/modules/ti_hci_drv.ko \
+	$(LOCAL_PATH)/prebuilt/modules/wl12xx.ko:system/lib/modules/wl12xx.ko \
+	$(LOCAL_PATH)/prebuilt/modules/wl12xx_sdio.ko:system/lib/modules/wl12xx_sdio.ko
+
 # Init files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/fstab.endeavoru:root/fstab.endeavoru \
