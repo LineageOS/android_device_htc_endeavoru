@@ -19,4 +19,3 @@
 /dev/block/platform/sdhci-tegra.3/by-name/LNX      /boot                emmc      defaults                                                recoveryonly
 /dev/block/platform/sdhci-tegra.3/by-name/SOS      /recovery            emmc      defaults                                                recoveryonly
 /dev/block/platform/sdhci-tegra.3/by-name/MSC      /misc                emmc      defaults                                                recoveryonly
-#/dev/block/platform/sdhci-tegra.3/by-name/ISD     /internal_sd         vfat      defaults                                                recoveryonly
