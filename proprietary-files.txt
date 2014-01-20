@@ -13,6 +13,7 @@ bin/rild
 bin/gsm0710muxd
 bin/poweroff_modem.sh
 bin/poweron_modem_fls.sh
+lib/libril.so
 lib/libhtc_ril.so
 lib/libhtc_rilhook.so
 
