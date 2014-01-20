@@ -117,10 +117,6 @@ etc/firmware/TIInit_10.5.20.bts
 etc/firmware/TIInit_10.6.15.bts
 etc/firmware/vac_config.ini
 etc/firmware/WL128x_2.21_1.1.bts
-etc/firmware/ti-connectivity/wl1271-nvs.bin
-etc/firmware/ti-connectivity/wl128x-fw-4-mr.bin
-etc/firmware/ti-connectivity/wl128x-fw-4-plt.bin
-etc/firmware/ti-connectivity/wl128x-fw-4-sr.bin
 etc/wifi/TQS_D_1.7.ini
 
 # Audio

@@ -119,12 +119,14 @@ on boot
     insmod /system/lib/modules/compat.ko
     insmod /system/lib/modules/cfg80211.ko
     insmod /system/lib/modules/mac80211.ko
-    insmod /system/lib/modules/wl12xx.ko debug_level=0x63c00
+    insmod /system/lib/modules/wlcore.ko
+    insmod /system/lib/modules/wlcore_sdio.ko
+    insmod /system/lib/modules/wl12xx.ko
     chmod 0660 /data/misc/wifi/dhcpd.conf
 # HTC_WIFI_END
 
     # CM: Run our own Wi-Fi calibration service  
-    start wifi_calib
+    # start wifi_calib
 
 # Load kineto_gan.ko while booting
     insmod /system/lib/modules/kineto_gan.ko

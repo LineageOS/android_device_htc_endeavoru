@@ -24,7 +24,7 @@
 -include device/htc/tegra3-common/BoardConfigCommon.mk
 
 # Boot/Recovery image settings
-BOARD_KERNEL_CMDLINE := 
+BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_PAGESIZE := 2048
 
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -54,8 +54,6 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Wifi related defines
 USES_TI_MAC80211 := true
-# Required for newer wpa_supplicant_8_ti versions to fix tethering
-BOARD_WIFI_SKIP_CAPABILITIES := true
 
 ifdef USES_TI_MAC80211
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
@@ -63,8 +61,6 @@ WPA_SUPPLICANT_VERSION           := VER_0_8_X_TI
 BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_WLAN_DEVICE                := wl12xx_mac80211
 BOARD_SOFTAP_DEVICE              := wl12xx_mac80211
-WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/wl12xx_sdio.ko"
-WIFI_DRIVER_MODULE_NAME          := "wl12xx_sdio"
 WIFI_FIRMWARE_LOADER             := ""
 COMMON_GLOBAL_CFLAGS             += -DUSES_TI_MAC80211
 endif
@@ -74,19 +70,29 @@ TARGET_KERNEL_SOURCE := kernel/htc/endeavoru
 TARGET_KERNEL_CONFIG := cyanogenmod_endeavoru_defconfig
 
 # Building wifi modules
-TARGET_MODULES_SOURCE := "kernel/htc/endeavoru/drivers/net/wireless/compat-wireless_R5.SP2.03"
-TARGET_MODULES_SOURCE_DIR := "compat-wireless_R5.SP2.03"
+BACKPORTS_DIR := "hardware/ti/wlan/mac80211/backports"
+BACKPORTS_CONFIG := wl12xx
 
 WIFI_MODULES:
-	rm -rf $(KERNEL_OUT)/COMPAT
-	mkdir $(KERNEL_OUT)/COMPAT
-	cp -rf $(TARGET_MODULES_SOURCE) $(KERNEL_OUT)/COMPAT
-	$(MAKE) -C $(KERNEL_OUT)/COMPAT/$(TARGET_MODULES_SOURCE_DIR) O=$(KERNEL_OUT)/COMPAT KERNEL_DIR=$(KERNEL_OUT) KLIB=$(KERNEL_OUT) KLIB_BUILD=$(KERNEL_OUT) ARCH=$(TARGET_ARCH) $(ARM_CROSS_COMPILE)
-	mv $(KERNEL_OUT)/COMPAT/$(TARGET_MODULES_SOURCE_DIR)/compat/compat.ko $(KERNEL_MODULES_OUT)
-	mv $(KERNEL_OUT)/COMPAT/$(TARGET_MODULES_SOURCE_DIR)/net/mac80211/mac80211.ko $(KERNEL_MODULES_OUT)
-	mv $(KERNEL_OUT)/COMPAT/$(TARGET_MODULES_SOURCE_DIR)/net/wireless/cfg80211.ko $(KERNEL_MODULES_OUT)
-	mv $(KERNEL_OUT)/COMPAT/$(TARGET_MODULES_SOURCE_DIR)/drivers/net/wireless/wl12xx/wl12xx.ko $(KERNEL_MODULES_OUT)
-	mv $(KERNEL_OUT)/COMPAT/$(TARGET_MODULES_SOURCE_DIR)/drivers/net/wireless/wl12xx/wl12xx_sdio.ko $(KERNEL_MODULES_OUT)
+	$(MAKE) -C $(BACKPORTS_DIR) mrproper
+	$(MAKE) -C $(BACKPORTS_DIR) KERNEL_DIR=$(KERNEL_OUT) KLIB=$(KERNEL_OUT) \
+		KLIB_BUILD=$(KERNEL_OUT) ARCH=$(TARGET_ARCH) $(ARM_CROSS_COMPILE) defconfig-$(BACKPORTS_CONFIG)
+	$(MAKE) -C $(BACKPORTS_DIR) KERNEL_DIR=$(KERNEL_OUT) KLIB=$(KERNEL_OUT) \
+		KLIB_BUILD=$(KERNEL_OUT) ARCH=$(TARGET_ARCH) $(ARM_CROSS_COMPILE)
+
+	mv $(BACKPORTS_DIR)/compat/compat.ko $(KERNEL_MODULES_OUT)
+	mv $(BACKPORTS_DIR)/net/mac80211/mac80211.ko $(KERNEL_MODULES_OUT)
+	mv $(BACKPORTS_DIR)/net/wireless/cfg80211.ko $(KERNEL_MODULES_OUT)
+	mv $(BACKPORTS_DIR)/drivers/net/wireless/ti/wlcore/wlcore.ko $(KERNEL_MODULES_OUT)
+	mv $(BACKPORTS_DIR)/drivers/net/wireless/ti/wlcore/wlcore_sdio.ko $(KERNEL_MODULES_OUT)
+	mv $(BACKPORTS_DIR)/drivers/net/wireless/ti/wl12xx/wl12xx.ko $(KERNEL_MODULES_OUT)
+
+	$(ARM_EABI_TOOLCHAIN)/arm-eabi-strip --strip-unneeded $(KERNEL_MODULES_OUT)/cfg80211.ko
+	$(ARM_EABI_TOOLCHAIN)/arm-eabi-strip --strip-unneeded $(KERNEL_MODULES_OUT)/compat.ko
+	$(ARM_EABI_TOOLCHAIN)/arm-eabi-strip --strip-unneeded $(KERNEL_MODULES_OUT)/mac80211.ko
+	$(ARM_EABI_TOOLCHAIN)/arm-eabi-strip --strip-unneeded $(KERNEL_MODULES_OUT)/wlcore.ko
+	$(ARM_EABI_TOOLCHAIN)/arm-eabi-strip --strip-unneeded $(KERNEL_MODULES_OUT)/wlcore_sdio.ko
+	$(ARM_EABI_TOOLCHAIN)/arm-eabi-strip --strip-unneeded $(KERNEL_MODULES_OUT)/wl12xx.ko
 
 TARGET_KERNEL_MODULES := WIFI_MODULES
 
