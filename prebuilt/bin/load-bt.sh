@@ -20,6 +20,9 @@ if [ -e "/system/lib/modules/hci_if_drv.ko" ]; then
 elif [ -e "/system/lib/modules/ti_hci_drv.ko" ]; then
     # Old module name
     /system/bin/insmod /system/lib/modules/ti_hci_drv.ko
+else
+    echo "Error: No module found"
+    return 1
 fi
 
 # Now try to find the major device number of whatever device what created and
@@ -32,19 +35,29 @@ MINOR=0
 # The device node we will create based on the existing one
 DEV_TO_CREATE=""
 
-if [ -e "$DEV_HTC" -a ! -e "$DEV_STOCK" ]; then
-    MAJOR=`/system/bin/grep tihci /proc/devices | /system/xbin/cut -d " " -f1`
-    DEV_TO_CREATE="$DEV_STOCK"
-elif [ -e "$DEV_STOCK" -a ! -e "$DEV_HTC"  ]; then
-    MAJOR=`/system/bin/grep hci_tty /proc/devices | /system/xbin/cut -d " " -f1`
-    DEV_TO_CREATE="$DEV_HTC"
-else
+for TRIES in $(seq 10); do
+    if [ -e "$DEV_HTC" -a ! -e "$DEV_STOCK" ]; then
+        MAJOR=`/system/bin/grep tihci /proc/devices | /system/xbin/cut -d " " -f1`
+        DEV_TO_CREATE="$DEV_STOCK"
+    elif [ -e "$DEV_STOCK" -a ! -e "$DEV_HTC"  ]; then
+        MAJOR=`/system/bin/grep hci_tty /proc/devices | /system/xbin/cut -d " " -f1`
+        DEV_TO_CREATE="$DEV_HTC"
+    else
+        # Wait for the device node to become available
+        echo "Waiting for device node to become available"
+        sleep 1
+    fi
+done
+
+
+if [ -z "$DEV_TO_CREATE" ]; then
     echo "Error: Neither $DEV_HTC nor $DEV_STOCK exists"
     return 1
+else
+    echo "Creating $DEV_TO_CREATE with major $MAJOR, minor $MINOR"
+    /system/bin/mknod "$DEV_TO_CREATE" c $MAJOR $MINOR
+    /system/bin/chown bluetooth:bluetooth "$DEV_TO_CREATE"
+    /system/bin/chmod 0600 "$DEV_TO_CREATE"
+
+    return 0
 fi
-
-echo "Creating $DEV_TO_CREATE with major $MAJOR, minor $MINOR"
-/system/bin/mknod "$DEV_TO_CREATE" c $MAJOR $MINOR
-/system/bin/chown bluetooth:bluetooth "$DEV_TO_CREATE"
-/system/bin/chmod 0600 "$DEV_TO_CREATE"
-
