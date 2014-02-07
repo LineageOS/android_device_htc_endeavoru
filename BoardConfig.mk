@@ -105,6 +105,8 @@ BOARD_USES_GENERIC_INVENSENSE := false
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_TI := true
+# Because Lloir Is AwesomeSauce
+BOARD_BLUEDROID_VENDOR_CONF := device/htc/endeavoru/bluetooth/vnd_endeavoru.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/endeavoru/bluetooth
 
 # Recovery
