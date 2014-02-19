@@ -243,3 +243,6 @@ persist.preload.common=0
 #net.bt.name=Android
 #dalvik.vm.stack-trace-file=/data/anr/traces.txt
 tf.enable=y
+# /cache is now the 2.1G UDA paritition, it should be big enough to hold the
+# Dalvik (and Art) cache and some additional data.
+dalvik.vm.dexopt-data-only=0

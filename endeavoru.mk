@@ -88,7 +88,6 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 $(call inherit-product, hardware/ti/wlan/mac80211/wl128x-wlan-products.mk)
-PRODUCT_COPY_FILES +=
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/prebuilt/bin/wifi_calibration.sh:system/bin/wifi_calibration.sh \
      $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
@@ -108,3 +107,7 @@ $(call inherit-product, vendor/htc/endeavoru/endeavoru-vendor.mk)
 
 # common tegra3-HOX+ configs
 $(call inherit-product, device/htc/tegra3-common/tegra3.mk)
+
+# Recovery partition layout check
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/prebuilt/bin/layout-check.sh:system/bin/layout-check.sh
