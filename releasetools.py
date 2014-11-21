@@ -22,15 +22,21 @@ import shutil
 #TARGET_DIR = os.getenv('OUT')
 #UTILITIES_DIR = os.path.join(TARGET_DIR, 'utilities')
 
-def FullOTA_Assertions(info):
-  info.script.AppendExtra(
-        ('assert('
-         'getprop("ro.bootloader") == "1.28.0000" || '
-         'getprop("ro.bootloader") == "1.31.0000" || '
-         'getprop("ro.bootloader") == "1.33.0000" || '
-         'getprop("ro.bootloader") == "1.36.0000" || '
-         'getprop("ro.bootloader") == "1.39.0000" || '
-         'getprop("ro.bootloader") == "1.72.0000" || '
-         'getprop("ro.bootloader") == "1.73.0000"'
-         ');'))
+# CWM displays 28 chars.
+LAYOUT_ERROR_MESSAGE = """You are running a incompatible recovery. Aborting installation!
+The HTC One X storage layout was changed in Lollipop.
+Install a newer recovery with Lollipop support.
+Please read and understand http://goo.gl/vvy4c7 to continue."""
 
+def FullOTA_Assertions(self):
+  self.script.AssertSomeBootloader("1.28.0000", "1.31.0000", "1.33.0000",
+                                   "1.36.0000", "1.39.0000", "1.72.0000",
+                                   "1.73.0000")
+
+def FullOTA_InstallBegin(self):
+  # ROM uses new storage layout, check if recovery supports it too
+  self.script.AppendExtra('ifelse(getprop("ro.build.endeavoru.newlayout") != "1", (')
+  for line in LAYOUT_ERROR_MESSAGE.split('\n'):
+    self.script.AppendExtra('ui_print("%s"); ' % line)
+
+  self.script.AppendExtra('abort(); ) );')
