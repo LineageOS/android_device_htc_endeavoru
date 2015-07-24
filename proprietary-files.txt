@@ -24,10 +24,6 @@ bin/l2_profile_exchange
 #Media link HD
 bin/hdmid
 
-#Invensense
-lib/libmllite.so
-lib/libinvensense_hal.so
-
 #Nvidia
 bin/nvcap_test
 bin/nvtest
@@ -94,7 +90,7 @@ lib/libnvwsi.so
 lib/libstagefrighthw.so
 lib/libtf_crypto_sst.so
 
-# OMX
+#OMX
 #lib/libstagefright_omx.so
 #lib/libaricentomxplugin.so
 
@@ -188,10 +184,10 @@ bin/GpsConfigFile.txt
 bin/patch-X.0.ce
 etc/gps/agps.truststore
 etc/gps/agps.truststore_lab
-etc/gps/tigpsrouter
-etc/gps/RXN/license.key
-etc/gps/RXN/MSLConfig.txt
-etc/gps/RXN/security.key
+etc/gnss/RXN/license.key
+etc/gnss/RXN/MSLConfig.txt
+etc/gnss/RXN/security.key
+etc/gnss/config/Connect_Config.txt
 lib/hw/gps.tegra.so
 lib/libmcphalgps.so
 lib/libgps.so
@@ -199,6 +195,9 @@ lib/libgpsservices.so
 lib/librilpos.so
 lib/libsupllocationprovider.so
 lib/libpos.so
+# I627a0238814cde427e9942213ddc870ee41443c6
+#etc/gps/tigpsrouter
+lib/libagnss.so
 
 #FM(TI)
 lib/libmcphal.so
@@ -226,9 +225,12 @@ lib/hw/sensors.endeavoru.so
 lib/libsensors_mpl.so
 lib/libmpl.so
 lib/libmlplatform.so
-lib/libakmd.so
-lib/libinvensense_hal.so
-lib/libewtzmu2cali.so
+lib/libmllite.so
+# I12027c3802376972086f1e7c4f65cecbe5074d34
+#lib/libinvensense_hal.so
+#lib/libakmd.so
+#lib/libewtzmu2cali.so
+bin/bma150_usr
 
 #EGL
 lib/egl/libEGL_tegra_impl.so
@@ -332,7 +334,6 @@ media/GPU/twoToneMaskH.bmp
 #lib/drm/libhtcomaplugin.so
 
 #bin/bluetoothd
-#bin/bma150_usr
 #bin/brcmapd
 #bin/charging
 #bin/cluster
@@ -395,7 +396,7 @@ media/GPU/twoToneMaskH.bmp
 
 # Some face detection stuff
 #lib/libfilterpack_facedetect.so
-#lib/libfrsdk.so.
+#lib/libfrsdk.so
 #media/LMprec_508.emd
 #media/PFFprec_600.emd
 
@@ -407,4 +408,3 @@ media/GPU/twoToneMaskH.bmp
 #vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.7/nose_base-y0-yi45-p0-pi45-r0-ri20.lg_32/full_model.bin
 #vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.7/left_eye-y0-yi45-p0-pi45-r0-ri20.lg_32/full_model.bin
 #vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.7/right_eye-y0-yi45-p0-pi45-r0-ri20.lg_32-2/full_model.bin
-
